@@ -1,0 +1,773 @@
+<!DOCTYPE html {lang="ru"}>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--  The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+  <title>Website</title>
+  <!-- -------------- Bootstrap ---------------->
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <!--HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+  <!---->
+  <!-- [if lt IE 9]>
+  script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+  script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  <![endif]
+  
+  -->
+  <!-- -------------- carousel ---------------->
+  <link href="css/styles-carousel.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- -------------- PhotoGallery ---------------->
+  <link rel="stylesheet" href="css/photogallery.css"/>
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.css"/>
+  <!-- -------------- main menu for IPAD ---------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function(){
+        var touch = $('#touch-menu');
+        var menu = $('.nav');
+    
+        $(touch).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function(){
+            var wid = $(window).width();
+            if(wid > 760 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+    
+  </script>
+  <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div id="wraper">
+    <div class="center">
+      <div class="header">
+        <div class="row no-gutter">
+          <div class="col-lg-5 col-md-5">
+            <nav class="top-menu hide-element-320">
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Baby клуб</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Новости</a></li>
+                <li class="hide-element"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-3 col-md-3"></div>
+          <div class="entry-wrap hide-element-320 col-lg-1 col-md-1">
+            <div class="entry"><a href="#">
+                <div class="entry-img"></div><span class="hide-element">Вход</span></a></div>
+          </div>
+          <div class="favorites-wrap hide-element-320 col-lg-1 col-md-1">
+            <div class="favorites"><a href="#">
+                <div class="favorites-img"></div><span class="hide-element">Избранное</span></a></div>
+          </div>
+          <div class="basket-wrap col-lg-2 col-md-2">
+            <div class="basket"><a href="#">
+                <div class="basket-img"></div>
+                <div class="basket-title hide-element">Корзина</div></a></div>
+          </div>
+          <div class="row no-gutter">
+            <div class="phone-wrap col-lg-4 col-md-5 col-xs-12">
+              <ul>
+                <li>
+                  <h3 class="phone"><span class="phone-1">(044) 593 82 39</span><span class="phone-2">800 50 77 12</span></h3>
+                </li>
+                <li>
+                  <form action="#">
+                    <button type="submit" class="call-back"><span class="hide-element-320">Обратный звонок</span><span class="hide-element-1200">Callback</span></button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+            <div class="logo-wrap col-lg-5 col-md-4 col-xs-10"><a href="#"><img src="img/logo.png" class="logo"/></a></div>
+            <div class="search-wrap hide-element-320 col-lg-3 col-md-2">
+              <form class="search">
+                <input type="text" name="search" placeholder="Поиск"/>
+              </form>
+            </div>
+          </div>
+          <!-- ------------- main-menu --------------->
+          <div class="row no-gutter">
+            <div class="main-menu-wrap col-lg-12 col-md-12"><a href="#" id="touch-menu" class="hide-img"><img src="img/main-menu.png"/>
+                <nav>
+                  <ul class="main-menu nav clearfix">
+                    <li><a href="#">Игры и Игрушки</a></li>
+                    <li><a href="#">Школа и Творчество</a></li>
+                    <li><a href="#">Одежда</a></li>
+                    <li><a href="#">Обувь</a></li>
+                    <li><a href="#">Кухня и Кормление</a></li>
+                    <li><a href="#">Гигиена и Уход</a></li>
+                    <li><a href="#">Спорт и Отдых</a></li>
+                    <li><a href="#">Детская и Коляски</a></li>
+                  </ul>
+                </nav></a></div>
+          </div>
+          <div class="row no-gutter">
+            <div class="hide-element col-lg-12 col-md-12">
+              <div class="category">
+                <ul>
+                  <li class="catalog-home"><a href="#" title="Каталог товаров" class="catalog"><span class="catalog-font">Panama.ua</span></a></li>
+                  <li class="arrow"><span>></span></li>
+                  <li class="catalog-child"><a href="#" title=""><span>Игрушки</span></a></li>
+                  <li class="arrow"><span>></span></li>
+                  <li class="catalog-child"><a href="#" title=""><span>Детские конструкторы</span></a></li>
+                  <li class="arrow"><span>></span></li>
+                  <li class="catalog-child"><a href="#" title=""><span>LEGO</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter item-wrap">
+            <div class="col-lg-6 col-md-6">
+              <div class="item-img">
+                <div class="gallery clearfix">
+                  <div class="pics clearfix">
+                    <div class="thumbs hide-element-320">
+                      <div class="preview"><a href="#" data-full="img/item.jpg" data-title="Spring 2013 | Luna + Hill" class="selected"><img src="img/item.jpg"/></a></div>
+                      <div class="preview"><a href="#" data-full="img/item.jpg" data-title="Spring 2013 | Luna + Hill"><img src="img/item.jpg"/></a></div>
+                      <div class="preview"><a href="#" data-full="img/luna3.jpg" data-title="Spring 2013 | Luna + Hill"><img src="img/luna3.jpg"/></a></div>
+                      <div class="preview"><a href="#" data-full="img/luna4.jpg" data-title="Spring 2013 | Luna + Hill"><img src="img/luna4.jpg"/></a></div>
+                      <div class="preview"><a href="#" data-full="img/luna5.jpg" data-title="Spring 2013 | Luna + Hill"><img src="img/luna5.jpg"/></a></div>
+                    </div><a href="img/luna1.jpg" title="Spring 2013 | Luna + Hill" class="full">
+                      <!-- first image is viewable to start--><img src="img/item.jpg"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="item-description">
+                <div class="row no-gutter">
+                  <div class="item-title-wrap col-lg-9 col-md-9 col-xs-9">
+                    <p class="lego-creator">Lego Creator</p>
+                    <h2 class="item-title">
+                      Домик на холме, большая коробка
+                      с деталями и кубиками
+                    </h2>
+                  </div>
+                </div>
+                <div class="row no-gutter">
+                  <div class="price-wrap col-lg-6 col-md-6 col-xs-6">
+                    <p><span class="price">5748<span class="grn">грн.</span></span></p>
+                    <p><span class="price-old">6574<span class="grn">грн.</span></span></p>
+                  </div>
+                  <div class="rate-wrap col-lg-3 col-md-3 col-xs-6">
+                    <div class="rate"></div>
+                    <p>54 отзыва</p>
+                  </div>
+                  <div class="social-main-wrap col-lg-3 col-md-3 col-xs-6 col-xs-5">
+                    <p>
+                      <div class="social-main"><a href="#" class="ic-fb">&nbsp;</a><a href="#" class="ic-vk">&nbsp;</a><a href="#" class="ic-ok">&nbsp;</a></div>
+                    </p>
+                  </div>
+                  <!-- &nbsp;- єто специальный символ в html котор назыв "неразрывный пробел", это нужно для того чтобы избежать ошибок в-->
+                </div>
+                <div class="row no-gutter size-wrap">
+                  <div class="hide-element col-lg-12 col-md-12">
+                    <p class="size">Размеры</p>
+                    <div class="size-select">
+                      <ul>
+                        <li>
+                          <div class="size-1 size-active"><a href="#">35</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">37</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">39</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">41</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">43</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">39</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">41</a></div>
+                        </li>
+                        <li>
+                          <div class="size-1"><a href="#">43</a></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutter">
+                  <div class="in-stock col-lg-6 col-md-6 col-xs-12"><span class="in-stock">В наличии!</span><span class="item-code">Код товара: 382743</span></div>
+                  <div class="col-lg-6 col-md-6 col-xs-6"><span class="delivery">Бесплатная доставка!</span></div>
+                </div>
+                <div class="row no-gutter button-buy-wrap">
+                  <div class="col-lg-6 col-md-6 button-buy">
+                    <form action="#"></form>
+                    <button type="submit" class="buy">КУПИТЬ</button>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-3"><span class="guaranty">
+                      Гарантия!
+                      </span></div>
+                </div>
+                <div class="row no-gutter">
+                  <div class="full-description col-lg-12 col-md-12 col-xs-11">
+                    <p class="full-description-title">Описание товара</p>
+                    <p>Из этой прекрасной двухэтажной виллы (LEGO № 5771) из серии LEGO Creator можно  К тому же из виллы можно собрать еще два других дома.</p>
+                    <p class="full-text-wrap">
+                      <div><a href="javascript:collapsElement('identifikator')" title="" rel="nofollow" class="full-text">Полный текст</a>
+                        <div id="identifikator" style="display: none">
+                          <p>Из этой прекрасной двухэтажной виллы (LEGO № 5771) из серии LEGO Creator можно  К тому же из виллы можно собрать еще два других дома.</p>
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter similar-items-wrap">
+            <div class="col-lg-3 col-md-3 col-xs-8">
+              <h3 class="similar-items">
+                Похожие товары
+                
+                
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center-carousel">
+      <div class="row no-gutter">
+        <div class="col-lg-12 col-md-12">
+          <div class="carousel shadow">
+            <div class="carousel-button-left"><a href="#"></a></div>
+            <div class="carousel-button-right"><a href="#"></a></div>
+            <div class="carousel-wrapper">
+              <div class="carousel-items">
+                <div class="carousel-block"><img alt="" src="img/ban-1.jpg"/>
+                  <div class="similar-item-title">Hasbro</div>
+                  <div class="similar-item-description">Игровой набор Летающие пони, Пинки Пай</div>
+                  <div class="similar-item-oldprice">850 грн</div>
+                  <div class="similar-item-price">
+                    719 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-2.jpg"/>
+                  <div class="similar-item-title">DigiBirds Silverlit</div>
+                  <div class="similar-item-description">Интерактивная птичка Бэлла со свистком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    449 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-3.jpg"/>
+                  <div class="similar-item-title">Keenway</div>
+                  <div class="similar-item-description">Электронный кассовый аппарат и весы</div>
+                  <div class="similar-item-oldprice">745 грн</div>
+                  <div class="similar-item-price">
+                    599 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-4.jpg"/>
+                  <div class="similar-item-title">Mattel Lori Nocotoy</div>
+                  <div class="similar-item-description">Вооруженный герой Max Steel с трюком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    99 гр
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-5.jpg"/>
+                  <div class="similar-item-title">DigiBirds Silverlit</div>
+                  <div class="similar-item-description">Интерактивная птичка Бэлла со свистком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    449 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-1.jpg"/>
+                  <p class="similar-item-title">Hasbro</p>
+                  <p class="similar-item-description">Игровой набор Летающие пони, Пинки Пай</p>
+                  <p class="similar-item-oldprice">850 грн</p>
+                  <p class="similar-item-price">
+                    719 грн
+                    
+                  </p>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-2.jpg"/>
+                  <p class="similar-item-title">DigiBirds Silverlit</p>
+                  <p class="similar-item-description">Интерактивная птичка Бэлла со свистком</p>
+                  <p class="similar-item-oldprice"></p>
+                  <p class="similar-item-price">
+                    449 грн
+                    
+                  </p>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-3.jpg"/>
+                  <p class="similar-item-title">Keenway</p>
+                  <p class="similar-item-description">Электронный кассовый аппарат и весы</p>
+                  <p class="similar-item-oldprice">745 грн</p>
+                  <p class="similar-item-price">
+                    599 грн
+                    
+                  </p>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-4.jpg"/>
+                  <p class="similar-item-title">Mattel Lori Nocotoy</p>
+                  <p class="similar-item-description">Вооруженный герой Max Steel с трюком</p>
+                  <p class="similar-item-oldprice"></p>
+                  <p class="similar-item-price">
+                    99 гр
+                    
+                  </p>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/ban-5.jpg"/>
+                  <p class="similar-item-title">DigiBirds Silverlit</p>
+                  <p class="similar-item-description">Интерактивная птичка Бэлла со свистком</p>
+                  <p class="similar-item-oldprice"></p>
+                  <p class="similar-item-price">
+                    449
+                    
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="row no-gutter">
+        <div class="col-lg-6 col-md-6 col-xs-8">
+          <h3 class="similar-items"><span class="hide-element-320">Купившие этот товар, так же интересуются</span><span class="hide-element-1200">Так же покупают</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="center-carousel">
+      <div class="row no-gutter">
+        <div class="col-lg-12 col-md-12">
+          <div class="carousel shadow">
+            <div class="carousel-button-left"><a href="#"></a></div>
+            <div class="carousel-button-right"><a href="#"></a></div>
+            <div class="carousel-wrapper">
+              <div class="carousel-items">
+                <div class="carousel-block"><img alt="" src="img/intresting-1.jpg"/>
+                  <div class="similar-item-title">Hasbro</div>
+                  <div class="similar-item-description">Игровой набор Летающие пони, Пинки Пай</div>
+                  <div class="similar-item-oldprice">850 грн</div>
+                  <div class="similar-item-price">
+                    719 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/intresting-2.jpg"/>
+                  <div class="similar-item-title">DigiBirds Silverlit</div>
+                  <div class="similar-item-description">Интерактивная птичка Бэлла со свистком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    449 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/intresting-3.jpg"/>
+                  <div class="similar-item-title">Keenway</div>
+                  <div class="similar-item-description">Электронный кассовый аппарат и весы</div>
+                  <div class="similar-item-oldprice">745 грн</div>
+                  <div class="similar-item-price">
+                    599 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/intresting-4.jpg"/>
+                  <div class="similar-item-title">Mattel Lori Nocotoy</div>
+                  <div class="similar-item-description">Вооруженный герой Max Steel с трюком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    99 гр
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/intresting-5.jpg"/>
+                  <div class="similar-item-title">DigiBirds Silverlit</div>
+                  <div class="similar-item-description">Интерактивная птичка Бэлла со свистком</div>
+                  <div class="similar-item-oldprice"></div>
+                  <div class="similar-item-price">
+                    449 грн
+                    
+                  </div>
+                </div>
+                <div class="carousel-block"><img alt="" src="img/intresting-1.jpg"/>
+                  <p class="similar-item-title">Hasbro</p>
+                  <p class="similar-item-description">Игровой набор Летающие пони, Пинки Пай</p>
+                  <p class="similar-item-oldprice">850 грн</p>
+                  <p class="similar-item-price">
+                    719 грн
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------- feedback ----------------------------->
+    <div class="center">
+      <div class="row no-gutter">
+        <div class="col-lg-6 col-md-6 col-xs-8">
+          <h3 class="feedback-title">Отзывы наших покупателей<span class="hide-element-320">и рейтинг товара</span></h3>
+        </div>
+      </div>
+      <div class="row no-gutter">
+        <div class="col-lg-6 col-md-6">
+          <div>
+            <form action="#">
+              <button type="submit" class="feedback-button">оставить свой комментарий</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutter">
+        <div class="col-lg-12 col-md-12">
+          <div class="row no-gutter feedback-container">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Анна, Днепропетровск</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <div class="rate"></div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-11">
+              <div>
+                <p>Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная.</p>
+                <p class="replay"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter feedback-container feedback-margin">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Юлиана</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <div class="rate rate-2"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-11">
+              <div>
+                <p>Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная. очень красивый цвет. Огорчило, что уже через неделю использования порвалась по шву где одевается седушка на трубочку. Но, вцелом, за такую цену качество хорошее. Не пожалели ни разу о покупке.</p>
+                <p class="replay"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3"><img src="img/children.jpg"/></div>
+          </div>
+          <div class="row no-gutter feedback-container">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Алексей, Киев</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <div class="rate rate-4"></div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-11">
+              <div>
+                <p>Палатка очень понравилась! Дочка в восторге. Практически не выходит из неё, спит там уже третью ночь мел очень ярко смотрится на блондинках, на брюнетках-видно его плохо. Держится на волосах около трёх часов.</p>
+                <p class="replay"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter feedback-container">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Юлиана</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <!--div.rate-->
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-11">
+              <div>
+                <p class="feedback-margin-left-1">Практически не выходит из неё, спит там уже третью ночь мел очень ярко смотрится на блондинках, на брюнетках-видно его плохо. Держится на волосах около трёх часов.</p>
+                <p class="replay feedback-margin-left-1"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter feedback-container">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Валентина</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <!--div.rate-->
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-11">
+              <div>
+                <p class="feedback-margin-left-2">Держится на волосах около трёх часов.</p>
+                <p class="replay feedback-margin-left-2"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutter feedback-container">
+            <div class="feedback-padding col-lg-3 col-md-3 col-xs-11">
+              <p class="feedback-name">Анна, Днепропетровск</p>
+              <p class="feedback-date">25 февраля 2015</p>
+              <div class="rate"></div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-11">
+              <div>
+                <p>Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная.</p>
+                <p class="replay"><a href="#">Ответить</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutter">
+        <div class="col-lg-3 col-md-4 feedback-page">
+          <ul>
+            <li>
+              <div class="feedback-next"><a href="#"><</a></div>
+            </li>
+            <li>
+              <div class="feedback-number"><a href="#">1</a></div>
+            </li>
+            <li>
+              <div class="feedback-number"><a href="#">2</a></div>
+            </li>
+            <li>
+              <div class="feedback-number"><a href="#">3</a></div>
+            </li>
+            <li>
+              <div class="feedback-number"><a href="#"> ...25</a></div>
+            </li>
+            <li>
+              <div class="feedback-next"><a href="#">></a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="hide-element row no-gutter catalog-wrap">
+        <div class="col-lg-12 col-md-12">
+          <p class="catalog-title"><a href="#">КАТАЛОГ</a></p>
+          <p class="catalog-links"><a href="#">Spring Beauty Sale  ></a><a href="#">Spring beauty sale  ></a><a href="#">Spring Beauty Sale для всех типов волос</a></p>
+          <p class="catalog-links"><a href="#">Шампуни>Универсальные шампуни  ></a><a href="#">Органический шампуни  ></a><a href="#">Шампуни для всех типов волос  ></a><a href="#">Индийские шампуни</a></p>
+          <p class="catalog-links"><a href="#">Косметика по уходу Chandi  ></a><a href="#">Косметика для волос Chandi  ></a><a href="#">Органическая косметика Chandi  ></a><a href="#">Косметика для всех типов волос Chandi  ></a><a href="#">Шампуни Chandi</a></p>
+          <p class="catalog-links"><a href="#">Косметика по уходу  ></a><a href="#">Универсальная косметика по уходу  ></a><a href="#">Органическая косметика по уходу  ></a><a href="#">Косметика по уходу для всех типов волос</a></p>
+          <p class="catalog-links"><a href="#"> Косметика для волос  ></a><a href="#">Универсальная косметика для волос  ></a><a href="#">Органическая косметика для волос  ></a><a href="#">Косметика для волос для всех типов волос  Органическая косметика  ></a><a href="#">Универсальная органическая косметика  ></a><a href="#">Органическая косметика  ></a><a href="#">Органическая косметика для всех типов волос</a></p>
+          <p class="catalog-links"><a href="#">Косметика для волос Chand  ></a><a href="#">Универсальная косметика по уходу  ></a><a href="#">Органическая косметика по уходу  ></a><a href="#">Косметика по уходу для всех типов волос</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------- services --------------------------------->
+    <div class="services-wrap">
+      <div class="center">
+        <div class="row no-gutter">
+          <div class="services">
+            <div class="service-wrap col-lg-3 col-md-3 col-xs-6">
+              <div class="service">
+                <div class="service-delivery"><a href="#"></a></div>
+                <div class="service-title"><a href="#">Бесплатная доставка</a></div>
+                <div class="service-description hide-element-320">
+                  По всей Украине без предоплат
+                  и коммисий за перевод денег
+                  
+                </div>
+              </div>
+            </div>
+            <div class="service-wrap col-lg-3 col-md-3 col-xs-6">
+              <div class="service">
+                <div class="service-assortment"><a href="#"></a></div>
+                <div class="service-title"><a href="#">Огромный ассортимент</a></div>
+                <div class="service-description hide-element-320">
+                  В нашем магазине представлено
+                  более 50000 товаров в наличии
+                  
+                </div>
+              </div>
+            </div>
+            <div class="service-wrap col-lg-3 col-md-3 col-xs-6">
+              <div class="service">
+                <div class="service-quality"><a href="#"></a></div>
+                <div class="service-title"><a href="#">100% Качественные товары</a></div>
+                <div class="service-description hide-element-320">
+                  Все товары сертифицированы
+                  и абсолютно безопасны для детей
+                  
+                </div>
+              </div>
+            </div>
+            <div class="service-wrap col-lg-3 col-md-3 col-xs-6">
+              <div class="service">
+                <div class="service-timework"><a href="#"></a></div>
+                <div class="service-title"><a href="#">Режим работы</a></div>
+                <div class="service-description hide-element-320">
+                  Мы работаем с понедельника
+                  по воскресенье с 7:00 по 20:00
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------- footer --------------------------------->
+    <div class="footer">
+      <div class="center">
+        <div class="row no-gutter">
+          <div class="col-lg-3 col-md-3 col-xs-6 footer-menu-1">
+            <ul>
+              <li class="panamaua">Panama.UA</li>
+              <li class="panamaua-title">Самый детский интернет магазин</li>
+              <li class="copyright">&#169; 2012-2015</li>
+              <li>
+                <div class="social"><a href="#" class="ic-fb">&nbsp;</a><a href="#" class="ic-vk">&nbsp;</a><a href="#" class="ic-ok">&nbsp;</a>
+                  <!-- &nbsp;- єто специальный символ в html котор назыв "неразрывный пробел", это нужно для того чтобы избежать ошибок в старых браузерах при наведении-->
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-6 footer-menu-2">
+            <ul>
+              <li><a href="#">О магазине</a></li>
+              <li><a href="#">Baby клуб</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-2 col-xs-6 footer-menu-3">
+            <ul>
+              <li><a href="#">Игрушки</a></li>
+              <li><a href="#">Школа и творчество</a></li>
+              <li><a href="#">Олежда и Обувь</a></li>
+              <li><a href="#">Малышам</a></li>
+              <li><a href="#">Гигиена и уход</a></li>
+              <li><a href="#">Спорт и отдых</a></li>
+              <li><a href="#">Интерьер и текстиль</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-11 footer-menu-4">
+            <ul>
+              <li class="email-wrap">
+                <p class="hide-element-1200">Узнавайте первыми о новинках</p>
+                <form class="email">
+                  <input type="text" name="email" placeholder="E-mail"/>
+                </form>
+              </li>
+              <li class="email-title hide-element-320">Узнавайте первыми о новинках  и распродажах</li>
+              <li class="footer-phone hide-element-320">(044) 593 82 39<span>0 800 50 77 12</span></li>
+              <li class="footer-call-back hide-element-320"><a href="#">Обратный звонок</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row no-gutter footer-bottom hide-element-320">
+          <div class="col-lg-8 col-md-8col-xs-8">
+            <p>Интернет магазин игрушек, товаров для мам и детей</p>
+          </div>
+          <div class="col-lg-4 col-md-4col-xs-4"><a href="#">Makeup.ua</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------- Выпадающий список ---------------->
+  <script>
+    function collapsElement(id) {
+    if ( document.getElementById(id).style.display != "none" ) {
+    document.getElementById(id).style.display = 'none';
+    }
+    else {
+    document.getElementById(id).style.display = '';
+    }
+    }
+    
+  </script>
+  <!-- ---------------- PhotoGallery ---------------->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="fancybox/jquery.fancybox.js"></script>
+  <script>
+    $(document).ready(function(){
+    
+        $(".preview a").on("click", function(){
+            $(".selected").removeClass("selected");
+            $(this).addClass("selected");
+            var picture = $(this).data();
+    
+            event.preventDefault(); //prevents page from reloading every time you click a thumbnail
+    
+    
+            $(".full img").fadeOut( 100, function() {
+                $(".full img").attr("src", picture.full);
+                $(".full").attr("href", picture.full);
+                $(".full").attr("title", picture.title);
+    
+            }).fadeIn();
+    
+    
+        });// end on click
+    
+        $(".full").fancybox({
+        helpers : {
+        title: {
+        type: 'inside'
+        }
+        },
+        closeBtn : true,
+        });
+    
+    
+    });//end doc ready
+    
+  </script>
+  <!-- ---------------- Карусель ---------------->
+  <script>
+    //Обработка клика на стрелку вправо
+    $(document).on('click', ".carousel-button-right",function(){
+        var carusel = $(this).parents('.carousel');
+        right_carusel(carusel);
+        return false;
+    });
+    //Обработка клика на стрелку влево
+    $(document).on('click',".carousel-button-left",function(){
+        var carusel = $(this).parents('.carousel');
+        left_carusel(carusel);
+        return false;
+    });
+    function left_carusel(carusel){
+       var block_width = $(carusel).find('.carousel-block').outerWidth();
+       $(carusel).find(".carousel-items .carousel-block").eq(-1).clone().prependTo($(carusel).find(".carousel-items"));
+       $(carusel).find(".carousel-items").css({"left":"-"+block_width+"px"});
+       $(carusel).find(".carousel-items .carousel-block").eq(-1).remove();
+       $(carusel).find(".carousel-items").animate({left: "0px"}, 200);
+            }
+    function right_carusel(carusel){
+       var block_width = $(carusel).find('.carousel-block').outerWidth();
+       $(carusel).find(".carousel-items").animate({left: "-"+ block_width +"px"}, 200, function(){
+          $(carusel).find(".carousel-items .carousel-block").eq(0).clone().appendTo($(carusel).find(".carousel-items"));
+          $(carusel).find(".carousel-items .carousel-block").eq(0).remove();
+          $(carusel).find(".carousel-items").css({"left":"0px"});
+       });
+    }
+            $(function() {
+    //Раскомментируйте строку ниже, чтобы включить автоматическую прокрутку карусели
+    //	auto_right('.carousel:first');
+    })
+            // Автоматическая прокрутка
+    function auto_right(carusel){
+        setInterval(function(){
+            if (!$(carusel).is('.hover'))
+                right_carusel(carusel);
+        }, 1000)
+    }
+    // Навели курсор на карусель
+    $(document).on('mouseenter', '.carousel', function(){$(this).addClass('hover')})
+    //Убрали курсор с карусели
+    $(document).on('mouseleave', '.carousel', function(){$(this).removeClass('hover')})
+    
+  </script>
+  <!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+  <!--script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")-->
+  <!--Include all compiled plugins (below), or include individual files as needed-->
+  <script src="js/bootstrap.min.js"></script>
+</body>

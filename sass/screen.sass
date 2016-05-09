@@ -1,0 +1,838 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+$color-black: #333
+$color-red: #ff3801
+@import "compass/reset"
+
+
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+
+.clearfix:after
+  clear: both
+
+.left
+  float: left
+
+.right
+  float: right
+
+
+/*убираем отступы в бутстрап*/
+.no-gutter > [class*='col-']
+  padding-right: 0
+  padding-left: 0
+
+
+/* переопределение стилей бутстрапа */
+.row
+  margin-left: 0
+  margin-right: 0
+
+a:hover, a:hover
+  text-decoration: none
+
+
+.center
+  max-width: 1160px
+  margin: 0 auto
+
+  color: $color-black
+
+  .top-menu li
+    float: left
+    margin: 10px 21px 10px 0
+    font-size: 13px
+    a
+      color: #000
+
+  .favorites, .entry, .basket
+    padding: 12px 21px 10px 0px
+    font-size: 13px
+    width: 20px
+    height: 30px
+    a
+      margin-left: 15px
+      color: #000
+
+
+  .entry .entry-img, .favorites .favorites-img
+    height: 20px
+    width: 20px
+    float: left
+    background: url(../img/sprite-main-menu.png) no-repeat 30% 50% /* Параметры фона */
+
+  .entry .entry-img
+    background-position: 0px -35px
+
+  .favorites .favorites-img
+    background-position: -20px -35px
+
+  .basket
+    float: right
+    width: 140px
+    height: 40px
+
+    background-color: #ff3801
+    a
+      color: #fff
+      margin-left: 0px
+      display: inline-block
+      div.basket-img
+        background: url(../img/sprite-main-menu.png) no-repeat  /* Параметры фона */
+        background-position: -45px -28px
+        float: left
+        height: 20px
+        width: 20px
+        margin-left: 20px
+        //margin-top: 0px
+      div.basket-title
+        margin-left: 50px
+
+
+  .phone
+    font-size: 18px
+    margin-top: 33px
+    .phone-2
+      margin-left: 20px
+
+  .call-back
+    font-size: 12px
+    width: 135px
+    height: 30px
+    background-color: #89c238
+    color: #fff
+    margin-top: 10px
+    border: none
+
+
+  .logo
+    margin: 30px 0 0 40px
+
+  .search
+    input[type=text]
+      width: 200px
+      box-sizing: border-box
+      border: 2px solid #ccc
+      border-radius: 19px
+      font-size: 13px
+      background-color: white
+      background: url('../img/searchicon.png') no-repeat 10% 50%
+      padding: 9px 20px 9px 40px
+      -webkit-transition: width 0.4s ease-in-out
+      transition: width 0.4s ease-in-out
+      margin-left: 70px
+      margin-top: 47px
+      float: right
+
+
+.main-menu-wrap nav li a
+  padding: 0px
+
+.main-menu
+  margin-top: 60px
+
+  li
+    float: left
+    margin: 0px 38px 0 0
+    font-size: 16px
+    font-weight: 600
+
+  li:last-child
+    margin-right: 0px /*  Поля вокруг текста */
+
+  a
+    color: #000
+    font-size: 16px
+
+// ----------- category -------------
+
+.category
+  margin-top: 50px
+  li
+    float: left
+    margin: 0px 10px 0 0
+    a
+      color: #000
+      font-size: 13px
+
+// -------------------- item ---------------------
+.lego-creator
+  margin-top: 60px
+  color: $color-red
+  font-size: 14px
+.item-title
+  margin-top: 20px
+  font-size: 24px
+.price-wrap
+  margin-top: 22px
+span.price
+  font-size: 22px
+span.price-old
+  font-size: 13px
+  color: #999
+  text-decoration: line-through
+
+
+.rate-wrap
+  margin-top: 22px
+  p
+    margin-top: 4px
+    text-decoration: underline
+.rate
+  display: inline-block
+  width: 80px
+  height: 15px
+  margin: 0 0px
+  background: url(../img/star-rate.png) no-repeat
+
+    // -------- social-main --------
+.social-main
+  margin-top: 22px
+  a
+    float: right
+    display: inline-block
+    margin: 0 0px 0 10px
+    width: 30px
+    height: 30px
+    background: url(../img/sprite-social-item.png) no-repeat /*задаем фоновую картинку наши социальные сети*/
+    border: 3px solid
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    -o-border-radius: 50%
+    border-radius: 50%
+
+  .ic-fb
+    background-position: 4px 2px
+    background-color: #415da6
+    border-color: #415da6
+  .ic-vk
+    background-position: -18px 2px
+    background-color: #6084a8
+    border-color: #6084a8
+  .ic-ok
+    background-position: -38px 2px
+    background-color: #db4d3f
+    border-color: #db4d3f
+
+// ------------- size -------------
+.size-wrap
+  margin-bottom: 30px
+.size
+  margin-top: 30px
+.size-select
+  margin-top: 20px
+  //margin-bottom: 30px
+  li
+    float: left
+  .size-1
+    width: 40px
+    height: 40px
+    margin-right: 10px
+    border: 1px solid #ccc
+    padding-top: 10px
+    a
+      margin: 10px 10px
+      color: $color-black
+  .size-active
+    border: 2px solid $color-red
+
+.in-stock
+  margin-right: 10px
+  color: $color-red
+.delivery, .guaranty
+  text-decoration: underline
+
+// ------------ button buy -------------
+.button-buy-wrap
+  margin-top: 12px
+  margin-bottom: 30px
+.button-buy
+  background: url(../img/favorites.png) no-repeat 190px 50%
+.buy
+  width: 160px
+  height: 40px
+  background-color: $color-red
+  border: none
+  color: #fff
+
+// ------------- full-description --------------
+.full-description
+  p
+    font-size: 13px
+p.full-description-title
+  font-size: 16px
+  margin-bottom: 20px
+.full-text-wrap
+  margin-top: 20px
+a.full-text
+  color: $color-red
+  text-decoration: underline
+
+// ------------- similar-items --------------
+.similar-items-wrap
+  margin-top: 70px
+h3.similar-items
+  font-size: 24px
+  color: $color-red
+
+// ----------- carousel -----------
+.center-carousel
+  width: 1200px
+  margin: 0 auto
+
+  .carousel-block
+    font-size: 14px
+    .similar-item-title
+      color: $color-red
+    .similar-item-description
+      width: 180px
+      height: 40px
+    .similar-item-oldprice
+      width: 60px
+      height: 20px
+      color: #ccc
+      text-decoration: line-through
+
+// ----------- feedback -----------
+.feedback-title
+  font-size: 24px
+  color: $color-red
+  margin-bottom: 20px
+// ------ button ------
+//.feedback-button-wrap
+
+.feedback-button
+  width: 280px
+  height: 40px
+  background-color: #89c238
+  font-size: 12px
+  color: #fff
+  text-transform: uppercase
+  border: none
+  margin-bottom: 50px
+
+.feedback-name, .feedback-date
+  font-size: 12px
+.feedback-date
+  color: #999
+  margin: 10px 0 20px 0
+.feedback-container
+  margin-bottom: 40px
+.feedback-margin
+  margin-bottom: 90px
+.feedback-img
+  img
+    margin-top: 120px
+    margin-left: 55px
+.rate-2
+  width: 32px
+.rate-4
+  width: 64px
+.replay
+  font-size: 12px
+
+  text-decoration: underline
+  margin-top: 20px
+  a
+    color: $color-red
+.feedback-margin-left-1
+  margin-left: 40px
+.feedback-margin-left-2
+  margin-left: 60px
+.feedback-page
+  li
+    float: left
+    margin: 0px 20px 80px 0px
+
+.feedback-next
+  width: 40px
+  height: 40px
+  border: 1px solid #dee1e3
+  padding: 12px 0 0 15px
+.feedback-number
+  padding-top: 12px
+
+// ----------- catalog -----------
+.catalog-wrap
+  margin-bottom: 100px
+.catalog-title
+  font-size: 10px
+  a
+    color: $color-red
+.catalog-links
+  font-size: 10px
+  a
+    color: #999
+    margin-right: 10px
+    line-height: 15px
+
+// ----------- services -----------
+.services-wrap
+  background-color: #f4f6f8
+  border-bottom: 3px solid $color-red
+
+  .service
+    width: 220px
+    height: 220px
+
+    .service-delivery,.service-assortment, .service-quality, .service-timework
+      text-align: center
+      margin: 40px 0 30px 0
+      a
+        display: inline-block
+        //margin: 0 10px 12px 0
+        width: 60px
+        height: 60px
+        background: url(../img/sprite-services.png) no-repeat /*задаем фоновую картинку наши социальные сети*/
+    .service-delivery
+      a
+        background-position: 0 0px
+    .service-assortment
+      a
+        background-position: -60px 0
+    .service-quality
+      a
+        background-position: -120px 0
+    .service-timework
+      a
+        background-position: -180px 0
+
+    .service-title
+      text-align: center
+      margin-bottom: 10px
+      a
+        color: $color-red
+        text-align: center
+        font-size: 16px
+
+    .service-description
+      text-align: center
+      font-size: 13px
+      line-height: 15px
+
+
+// -------------------------- footer -----------------------------
+.footer
+  .center
+    .footer-menu-1, .footer-menu-2, .footer-menu-3, .footer-menu-4
+      margin-top: 42px
+      li
+        margin-bottom: 20px
+        a
+          color: $color-black
+    //  ----------------- footer-menu-1 -------------------
+    .footer-menu-1
+      li.panamaua
+        font-size: 18px
+      li.panamaua-title
+        font-size: 13px
+      li.copyright
+        font-size: 12px
+
+    // -------- social --------
+    .social
+      margin-top: 40px
+      a
+        display: inline-block
+        margin: 0 10px 0 0px
+        width: 30px
+        height: 30px
+        background: url(../img/sprite-social.png) no-repeat /*задаем фоновую картинку наши социальные сети*/
+        border: 3px solid $color-red
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        -o-border-radius: 50%
+        border-radius: 50%
+
+      .ic-fb
+        background-position: 8px 5px
+      .ic-vk
+        background-position: -35px 5px
+      .ic-ok
+        background-position: -75px 5px
+    //  ----------------- footer-menu-4 -------------------
+    // -------- email --------
+    .footer-menu-4
+      li
+        margin-left: 100px
+        .email
+          input[type=text]
+            width: 260px
+            box-sizing: border-box
+            border: 2px solid #ccc
+            border-radius: 19px
+            font-size: 13px
+            background-color: white
+            //background: url('../img/searchicon.png') no-repeat 10% 50%
+            padding: 9px 20px 9px 18px
+            -webkit-transition: width 0.4s ease-in-out
+            transition: width 0.4s ease-in-out
+            margin-bottom: 22px
+            color: $color-black
+            //float: right
+      .footer-phone
+        margin: 40px 0 10px 100px
+      .footer-call-back
+        a
+          color: #8ac33a
+          text-decoration: underline
+
+    //  ----------------- footer-bottom -------------------
+    .footer-bottom
+      color: #666
+      margin-top: 60px
+      margin-bottom: 20px
+      a
+        color: #666
+        margin-left: 100px
+
+    .footer-phone
+      span
+        margin-left: 20px
+
+  // ----------- additional --------
+.center
+  #touch-menu
+    display: block
+    padding: 5px 15px
+    display: none
+  .hide-element-1200
+    display: none
+
+// --------------------------- @media screen and (max-width: 1024px) -------------------------
+@media screen and (max-width: 1024px)
+  .hide-element
+    display: none
+  .center
+    width: 980px
+
+  .center
+    .basket
+      float: right
+      width: 30px
+      height: 30px
+      background-color: #fff
+      padding-top: 5px
+
+      a
+        div.basket-img
+          width: 30px
+          height: 30px
+          background-position: -60px 0px
+          margin-left: 0px
+
+    .entry .entry-img, .favorites .favorites-img
+      width: 30px
+      height: 30px
+
+    .entry, .favorites
+      width: 30px
+      height: 30px
+      padding-top: 5px
+
+    .entry .entry-img
+      background-position: 0px -0px
+
+    .favorites .favorites-img
+      background-position: -30px 3px
+
+    .entry-wrap
+      margin: 50px 0px 0px 0px
+      .entry-img
+        margin-left: 180px
+    .favorites-wrap
+      margin: 50px 0px 0px 0px
+      .favorites-img
+        margin-left: 150px
+    .basket-wrap
+      margin: 50px 0px 0px 0px
+      padding-right: 10px
+
+  //------------- phone -------------
+  .phone-wrap
+    margin-top: -96px
+    margin-left: 600px
+    li
+      float: left
+      .call-back
+        width: 170px
+        height: 40px
+        font-size: 16px
+    li
+      .phone-1, .phone-2
+        font-size: 16px
+    .phone
+      margin-top: 22px
+      .phone-2
+        margin-right: 7px
+
+  //------------- search -------------
+  .center
+    .search
+      input[type=text]
+        width: 20px
+        box-sizing: border-box
+        border: none
+        border-radius: 19px
+        font-size: 13px
+        background-color: white
+        background: url('../img/sprite-main-menu.png') no-repeat
+        background-position: -90px 5px
+        padding: 9px 20px 9px 40px
+        -webkit-transition: width 0.4s ease-in-out
+        transition: width 0.4s ease-in-out
+        margin-left: 0px
+        margin-top: 47px
+        float: left
+
+      input[type=text]:focus
+        width: 100%
+
+    .search-wrap
+      margin: -85px 0 0 80px
+    .logo-wrap
+      margin: -85px 0 0 300px
+      a
+        img
+          width: 54%
+    .logo
+      margin: 30px 0 0 120px
+
+  //------------- main-menu -------------
+  .center .main-menu
+    margin-top: 5px
+
+  .nav
+    display: none
+  .nav li
+    float: none
+  .nav li a
+    border-top: 1px solid #eee
+    border-left: 3px solid transparent
+    background: #fff
+    color: #666
+
+  .nav li:first-child a
+    border-top: none
+  .nav li a:hover
+    background: #f0f0f0
+    color: #444
+    border-left: 3px solid #515572
+
+  .center #touch-menu
+    display: block
+    img
+      margin-top: -43px
+
+  .main-menu-wrap nav li a
+    padding: 10px 15px
+  // ------------- gallery ------------
+  .gallery .full img
+    width: 90%
+
+  // ------------- carousel -----------
+  .center-carousel
+    width: 1000px
+  .carousel
+    max-width: 1000px
+    width: 100%
+
+  // ----------- social --------
+  .social-main a
+    float: left
+    margin-left: 7px
+
+  // ----------- footer ---------
+  .footer .center .footer-menu-4 li
+    margin-left: 50px
+  .footer .center .footer-menu-4 .footer-phone
+    margin-left:  50px
+  .footer .center .footer-menu-1
+    padding-left: 20px
+  // ----------- feedback ---------
+  .center .feedback-container div.feedback-padding
+    padding-left: 20px
+
+// --------------------------- @media screen and (max-width: 320px) -------------------------
+@media screen and (max-width: 320px)
+  .hide-element-320
+    display: none
+  .hide-element-1200
+    display: block
+  .center
+    width: 320px
+    padding: 0px 5px
+
+  //------------- phone -------------
+  .phone-wrap
+    margin-top: -83px
+    margin-left: 0px
+    li
+      .call-back
+        width: 80px
+        height: 30px
+        font-size: 14px
+        margin-left: 7px
+    li
+      .phone-1, .phone-2
+        font-size: 16px
+
+    .phone
+      margin-top: 12px
+      .phone-2
+        margin-left: 10px
+  .center .call-back
+    margin-top: 2px
+    margin-left: 0px
+
+  //------------- main-menu -------------
+  .center .main-menu
+    margin-top: 5px
+  .center #touch-menu
+    img
+      margin-top: -30px
+      margin-left: -15px
+  //----------- logo --------------
+  .center .logo-wrap
+    margin: -85px 0 0 0px
+  .center .logo-wrap a img
+    width: 45%
+  .center .logo
+    margin: 60px 0 0 80px
+  // -------- basket --------------
+  .center .basket a
+    margin-top: 5px
+    margin-left: -10px
+
+  .item-title-wrap
+    margin-top: -415px
+  .lego-creator
+    margin-top: 0px
+
+  // ----------- description-title --------
+  .full-description-title
+    font-weight: bold
+  .gallery .full img
+    width: 70%
+
+  .pics
+    margin-top: 110px
+  .buy
+    width: 280px
+    height: 40px
+    margin-top: -105px
+    margin-left: 5px
+  .social-main-wrap
+    margin-top: 340px
+    position: absolute
+    margin-left: 170px
+
+  .in-stock
+    margin-top: 50px
+  .delivery
+    display: block
+    margin-top: 200px
+    position: absolute
+  .guaranty
+    display: block
+    margin-top: 200px
+    position: absolute
+
+  // ---------------- feedback ------------
+  .feedback-button
+    margin: 0px 0px 20px 5px
+  .feedback-padding .rate
+    float: right
+    margin-top: -55px
+  .feedback-page
+    margin-left: 30px
+
+  // ------------- carousel --------------
+  .center-carousel
+    width: 280px
+    .carousel
+      width: 280px
+      margin: 0
+    .carousel-button-left a
+      margin-right: 15px
+    .carousel-button-right a
+      margin-left: 5px
+  .similar-items
+    margin-top: 40px
+
+  // ------------- service --------------
+  .services-wrap
+    width: 320px
+    background-color: #fff
+
+    .service
+      width: 150px
+      height: 100px
+      padding-right: 0
+      padding-left: 0
+      margin-bottom: 20
+
+  .services-wrap
+    .service
+      .service-delivery, .service-assortment, .service-quality, .service-timework
+        width: 150px
+        margin: 0px 0 10px 0
+
+
+  .center .similar-items .hide-element-1200, .center .phone-wrap .call-back .hide-element-1200
+    display: block
+
+  .service-wrap
+    padding-right: 5
+    padding-left: 5
+  .service-title
+    width: 140px
+    text-align: center
+    padding-left: 15
+
+  .services-wrap .service .service-delivery a, .services-wrap .service .service-assortment a, .services-wrap .service .service-quality a, .services-wrap .service .service-timework a
+    background: url(../img/sprite-services-320.png) no-repeat
+    width: 40px
+    height: 40px
+  .services-wrap .service .service-delivery a
+    background-position: 0px 0px
+  .services-wrap .service .service-assortment a
+    background-position: -160px 0px
+  .services-wrap .service .service-quality a
+    background-position: 0px -90px
+  .services-wrap .service .service-timework a
+    background-position: -160px -90px
+
+  .footer .center .footer-menu-4 li.email-wrap
+    margin: -520px 0 0 25
+
+  .footer .center .hide-element-1200
+    display: block
+    margin-bottom: 10px
+  .footer .center .footer-menu-4 li .email input[type=text]
+    border-radius: 0px
+  .footer .center .footer-menu-1, .footer .center .footer-menu-2, .footer .center .footer-menu-3, .footer .center .footer-menu-4
+    margin-top: 102px
+  .footer .center .footer-menu-1
+    margin-top: 350
+  .footer .center .footer-menu-3
+    margin: -182px 0 0 -152
+  .footer .center .footer-menu-1 .panamaua-title
+    width: 200px
+
+  .footer .center .social
+    margin-top: -60px
+
+  .footer .center .footer-menu-1 li.panamaua
+    font-size: 13px
+    margin: 70px 0 0 0
+  .footer .center .footer-menu-1 li.copyright
+    font-size: 13px
+    margin: -46px 0 0 70px
+    width: 100px

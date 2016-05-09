@@ -1,0 +1,835 @@
+doctype html {lang="ru"}
+head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    //  The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Website
+
+    // -------------- Bootstrap --------------
+    link(href="css/bootstrap.min.css" rel="stylesheet")
+    //HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //
+    // [if lt IE 9]>
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+        <![endif]
+
+    // -------------- carousel --------------
+    link(href="css/styles-carousel.css" rel="stylesheet" type="text/css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+
+    // -------------- PhotoGallery --------------
+    link(rel="stylesheet" href="css/photogallery.css")
+    link(rel="stylesheet" href="fancybox/jquery.fancybox.css")
+
+    // -------------- main menu for IPAD --------------
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
+    script.
+        $(document).ready(function(){
+            var touch = $('#touch-menu');
+            var menu = $('.nav');
+
+            $(touch).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var wid = $(window).width();
+                if(wid > 760 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+
+    link(href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
+
+body
+    div#wraper
+        div.center
+            div.header
+                div.row.no-gutter
+                    div.col-lg-5.col-md-5
+                        nav.top-menu.hide-element-320
+                            ul
+                                li
+                                    a(href="#") О магазине
+                                li
+                                    a(href="#") Baby клуб
+                                li
+                                    a(href="#") Доставка и оплата
+                                li
+                                    a(href="#") Новости
+                                li.hide-element
+                                    a(href="#") Контакты
+                    div.col-lg-3.col-md-3
+                    div.entry-wrap.hide-element-320.col-lg-1.col-md-1
+                        div.entry
+                            a(href="#")
+                                div.entry-img
+                                span.hide-element Вход
+                    div.favorites-wrap.hide-element-320.col-lg-1.col-md-1
+                        div.favorites
+                            a(href="#")
+                                div.favorites-img
+                                span.hide-element Избранное
+                    div.basket-wrap.col-lg-2.col-md-2
+                        div.basket
+                            a(href="#")
+                                div.basket-img
+                                div.basket-title.hide-element Корзина
+
+                    div.row.no-gutter
+                        div.phone-wrap.col-lg-4.col-md-5.col-xs-12
+                            ul
+                                li
+                                    h3.phone
+                                        span.phone-1.
+                                            (044) 593 82 39
+                                        span.phone-2.
+                                            800 50 77 12
+                                li
+                                    form(action="#")
+                                        button(type="submit" class="call-back")
+                                            span.hide-element-320 Обратный звонок
+                                            span.hide-element-1200 Callback
+
+                        div.logo-wrap.col-lg-5.col-md-4.col-xs-10
+                            a(href="#")
+                                img(src="img/logo.png", class="logo")
+                        div.search-wrap.hide-element-320.col-lg-3.col-md-2
+                            form.search
+                                input(type="text" name="search" placeholder="Поиск")
+
+                    // ------------- main-menu -------------
+                    div.row.no-gutter
+                        div.main-menu-wrap.col-lg-12.col-md-12
+                            a.hide-img(href="#" id="touch-menu")
+                                img(src="img/main-menu.png")
+                                nav
+                                    ul.main-menu.nav.clearfix
+                                        li
+                                            a(href="#") Игры и Игрушки
+                                        li
+                                            a(href="#") Школа и Творчество
+                                        li
+                                            a(href="#") Одежда
+                                        li
+                                            a(href="#") Обувь
+                                        li
+                                            a(href="#") Кухня и Кормление
+                                        li
+                                            a(href="#") Гигиена и Уход
+                                        li
+                                            a(href="#") Спорт и Отдых
+                                        li
+                                            a(href="#") Детская и Коляски
+
+                    div.row.no-gutter
+                        div.hide-element.col-lg-12.col-md-12
+                            div.category
+                                ul
+                                    li.catalog-home
+                                        a(class="catalog" href="#" title="Каталог товаров")
+                                            span(class="catalog-font") Panama.ua
+                                    li.arrow
+                                        span >
+
+                                    li.catalog-child
+                                        a(href="#" title="")
+                                            span Игрушки
+                                    li.arrow
+                                        span >
+                                    li.catalog-child
+                                        a(href="#" title="")
+                                            span Детские конструкторы
+                                    li.arrow
+                                        span >
+                                    li.catalog-child
+                                        a(href="#" title="")
+                                            span LEGO
+
+                    div.row.no-gutter.item-wrap
+                        div.col-lg-6.col-md-6
+                            div.item-img
+                                .gallery.clearfix
+                                    .pics.clearfix
+                                        .thumbs.hide-element-320
+                                            .preview
+                                                a.selected(href='#', data-full='img/item.jpg', data-title='Spring 2013 | Luna + Hill')
+                                                    img(src='img/item.jpg')
+                                            .preview
+                                                a(href='#', data-full='img/item.jpg', data-title='Spring 2013 | Luna + Hill')
+                                                    img(src='img/item.jpg')
+                                            .preview
+                                                a(href='#', data-full='img/luna3.jpg', data-title='Spring 2013 | Luna + Hill')
+                                                    img(src='img/luna3.jpg')
+                                            .preview
+                                                a(href='#', data-full='img/luna4.jpg', data-title='Spring 2013 | Luna + Hill')
+                                                    img(src='img/luna4.jpg')
+                                            .preview
+                                                a(href='#', data-full='img/luna5.jpg', data-title='Spring 2013 | Luna + Hill')
+                                                    img(src='img/luna5.jpg')
+                                        a.full(href='img/luna1.jpg', title='Spring 2013 | Luna + Hill')
+                                            // first image is viewable to start
+                                            img(src='img/item.jpg')
+
+                        div.col-lg-6.col-md-6
+                            div.item-description
+                                div.row.no-gutter
+                                    div.item-title-wrap.col-lg-9.col-md-9.col-xs-9
+                                        p.lego-creator.
+                                            Lego Creator
+                                        h2.item-title.
+                                            Домик на холме, большая коробка
+                                            с деталями и кубиками
+                                div.row.no-gutter
+                                    div.price-wrap.col-lg-6.col-md-6.col-xs-6
+                                        p
+                                            span.price 5748
+                                                span.grn грн.
+                                        p
+                                            span.price-old 6574
+                                                span.grn грн.
+                                    div.rate-wrap.col-lg-3.col-md-3.col-xs-6
+                                        div.rate
+                                        p.
+                                            54 отзыва
+                                    div.social-main-wrap.col-lg-3.col-md-3.col-xs-6.col-xs-5
+                                        p
+                                            div.social-main
+                                                a.ic-fb(href="#") &nbsp;
+                                                a.ic-vk(href="#") &nbsp;
+                                                a.ic-ok(href="#") &nbsp;
+                                    // &nbsp;- єто специальный символ в html котор назыв "неразрывный пробел", это нужно для того чтобы избежать ошибок в
+
+                                div.row.no-gutter.size-wrap
+                                    div.hide-element.col-lg-12.col-md-12
+                                        p.size.
+                                            Размеры
+                                        div.size-select
+                                            ul
+                                                li
+                                                    div.size-1.size-active
+                                                        a(href="#") 35
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 37
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 39
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 41
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 43
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 39
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 41
+                                                li
+                                                    div.size-1
+                                                        a(href="#") 43
+                                div.row.no-gutter
+                                    div.in-stock.col-lg-6.col-md-6.col-xs-12
+                                        span.in-stock.
+                                             В наличии!
+                                        span.item-code.
+                                             Код товара: 382743
+                                    div.col-lg-6.col-md-6.col-xs-6
+                                        span.delivery.
+                                             Бесплатная доставка!
+                                div.row.no-gutter.button-buy-wrap
+                                    div.col-lg-6.col-md-6.button-buy
+                                        form(action="#")
+                                        button(type="submit" class="buy") КУПИТЬ
+                                    div.col-lg-6.col-md-6.col-xs-3
+                                        span.guaranty.
+                                             Гарантия!
+
+                                div.row.no-gutter
+                                    div.full-description.col-lg-12.col-md-12.col-xs-11
+                                        p.full-description-title.
+                                            Описание товара
+                                        p.
+                                            Из этой прекрасной двухэтажной виллы (LEGO № 5771) из серии LEGO Creator можно  К тому же из виллы можно собрать еще два других дома.
+                                        p.full-text-wrap
+                                            div
+                                                a.full-text(href="javascript:collapsElement('identifikator')", title='', rel='nofollow') Полный текст
+                                                #identifikator(style='display: none')
+                                                    p Из этой прекрасной двухэтажной виллы (LEGO № 5771) из серии LEGO Creator можно  К тому же из виллы можно собрать еще два других дома.
+                    div.row.no-gutter.similar-items-wrap
+                        div.col-lg-3.col-md-3.col-xs-8
+                            h3.similar-items.
+                                Похожие товары
+
+
+        div.center-carousel
+            div.row.no-gutter
+                div.col-lg-12.col-md-12
+                    div.carousel.shadow
+                        div.carousel-button-left
+                            a(href="#")
+                        div.carousel-button-right
+                            a(href="#")
+                        div.carousel-wrapper
+                            div.carousel-items
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-1.jpg")
+                                    div.similar-item-title.
+                                        Hasbro
+                                    div.similar-item-description.
+                                        Игровой набор Летающие пони, Пинки Пай
+                                    div.similar-item-oldprice.
+                                        850 грн
+                                    div.similar-item-price.
+                                        719 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-2.jpg")
+                                    div.similar-item-title.
+                                        DigiBirds Silverlit
+                                    div.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    div.similar-item-oldprice.
+
+                                    div.similar-item-price.
+                                        449 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-3.jpg")
+                                    div.similar-item-title.
+                                        Keenway
+                                    div.similar-item-description.
+                                        Электронный кассовый аппарат и весы
+                                    div.similar-item-oldprice.
+                                        745 грн
+                                    div.similar-item-price.
+                                        599 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-4.jpg")
+                                    div.similar-item-title.
+                                        Mattel Lori Nocotoy
+                                    div.similar-item-description.
+                                        Вооруженный герой Max Steel с трюком
+                                    div.similar-item-oldprice.
+                                    div.similar-item-price.
+                                        99 гр
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-5.jpg")
+                                    div.similar-item-title.
+                                        DigiBirds Silverlit
+                                    div.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    div.similar-item-oldprice.
+                                    div.similar-item-price.
+                                        449 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-1.jpg")
+                                    p.similar-item-title.
+                                        Hasbro
+                                    p.similar-item-description.
+                                        Игровой набор Летающие пони, Пинки Пай
+                                    p.similar-item-oldprice.
+                                        850 грн
+                                    p.similar-item-price.
+                                        719 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-2.jpg")
+                                    p.similar-item-title.
+                                        DigiBirds Silverlit
+                                    p.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    p.similar-item-oldprice.
+
+                                    p.similar-item-price.
+                                        449 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-3.jpg")
+                                    p.similar-item-title.
+                                        Keenway
+                                    p.similar-item-description.
+                                        Электронный кассовый аппарат и весы
+                                    p.similar-item-oldprice.
+                                        745 грн
+                                    p.similar-item-price.
+                                        599 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-4.jpg")
+                                    p.similar-item-title.
+                                        Mattel Lori Nocotoy
+                                    p.similar-item-description.
+                                        Вооруженный герой Max Steel с трюком
+                                    p.similar-item-oldprice.
+                                    p.similar-item-price.
+                                        99 гр
+
+                                div.carousel-block
+                                    img(alt="" src="img/ban-5.jpg")
+                                    p.similar-item-title.
+                                        DigiBirds Silverlit
+                                    p.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    p.similar-item-oldprice.
+                                    p.similar-item-price.
+                                        449
+
+
+        div.center
+            div.row.no-gutter
+                div.col-lg-6.col-md-6.col-xs-8
+                    h3.similar-items
+                        span.hide-element-320 Купившие этот товар, так же интересуются
+                        span.hide-element-1200 Так же покупают
+        div.center-carousel
+            div.row.no-gutter
+                div.col-lg-12.col-md-12
+                    div.carousel.shadow
+                        div.carousel-button-left
+                            a(href="#")
+                        div.carousel-button-right
+                            a(href="#")
+                        div.carousel-wrapper
+                            div.carousel-items
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-1.jpg")
+                                    div.similar-item-title.
+                                        Hasbro
+                                    div.similar-item-description.
+                                        Игровой набор Летающие пони, Пинки Пай
+                                    div.similar-item-oldprice.
+                                        850 грн
+                                    div.similar-item-price.
+                                        719 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-2.jpg")
+                                    div.similar-item-title.
+                                        DigiBirds Silverlit
+                                    div.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    div.similar-item-oldprice.
+
+                                    div.similar-item-price.
+                                        449 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-3.jpg")
+                                    div.similar-item-title.
+                                        Keenway
+                                    div.similar-item-description.
+                                        Электронный кассовый аппарат и весы
+                                    div.similar-item-oldprice.
+                                        745 грн
+                                    div.similar-item-price.
+                                        599 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-4.jpg")
+                                    div.similar-item-title.
+                                        Mattel Lori Nocotoy
+                                    div.similar-item-description.
+                                        Вооруженный герой Max Steel с трюком
+                                    div.similar-item-oldprice.
+                                    div.similar-item-price.
+                                        99 гр
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-5.jpg")
+                                    div.similar-item-title.
+                                        DigiBirds Silverlit
+                                    div.similar-item-description.
+                                        Интерактивная птичка Бэлла со свистком
+                                    div.similar-item-oldprice.
+                                    div.similar-item-price.
+                                        449 грн
+
+                                div.carousel-block
+                                    img(alt="" src="img/intresting-1.jpg")
+                                    p.similar-item-title.
+                                        Hasbro
+                                    p.similar-item-description.
+                                        Игровой набор Летающие пони, Пинки Пай
+                                    p.similar-item-oldprice.
+                                        850 грн
+                                    p.similar-item-price.
+                                        719 грн
+
+        // -------------------------- feedback ---------------------------
+        div.center
+            div.row.no-gutter
+                div.col-lg-6.col-md-6.col-xs-8
+                    h3.feedback-title Отзывы наших покупателей
+                        span.hide-element-320 и рейтинг товара
+            div.row.no-gutter
+                div.col-lg-6.col-md-6
+                    div
+                        form(action="#")
+                            button.feedback-button(type="submit") оставить свой комментарий
+            div.row.no-gutter
+                div.col-lg-12.col-md-12
+                    div.row.no-gutter.feedback-container
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Анна, Днепропетровск
+                            p.feedback-date.
+                                       25 февраля 2015
+                            div.rate
+                        div.col-lg-9.col-md-9.col-xs-11
+                            div
+                                p.
+                                    Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная.
+                                p.replay
+                                    a(href="#") Ответить
+                    div.row.no-gutter.feedback-container.feedback-margin
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Юлиана
+                            p.feedback-date.
+                                25 февраля 2015
+                            div.rate.rate-2
+                        div.col-lg-6.col-md-6.col-xs-11
+                            div
+                                p.
+                                   Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная. очень красивый цвет. Огорчило, что уже через неделю использования порвалась по шву где одевается седушка на трубочку. Но, вцелом, за такую цену качество хорошее. Не пожалели ни разу о покупке.
+                                p.replay
+                                    a(href="#") Ответить
+                        div.col-lg-3.col-md-3
+                            img(src="img/children.jpg")
+                    div.row.no-gutter.feedback-container
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Алексей, Киев
+                            p.feedback-date.
+                                25 февраля 2015
+                            div.rate.rate-4
+                        div.col-lg-9.col-md-9.col-xs-11
+                            div
+                                p.
+                                   Палатка очень понравилась! Дочка в восторге. Практически не выходит из неё, спит там уже третью ночь мел очень ярко смотрится на блондинках, на брюнетках-видно его плохо. Держится на волосах около трёх часов.
+                                p.replay
+                                    a(href="#") Ответить
+                    div.row.no-gutter.feedback-container
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Юлиана
+                            p.feedback-date.
+                                25 февраля 2015
+                            //div.rate
+                        div.col-lg-9.col-md-9.col-xs-11
+                            div
+                                p.feedback-margin-left-1.
+                                    Практически не выходит из неё, спит там уже третью ночь мел очень ярко смотрится на блондинках, на брюнетках-видно его плохо. Держится на волосах около трёх часов.
+                                p.replay.feedback-margin-left-1
+                                    a(href="#") Ответить
+                    div.row.no-gutter.feedback-container
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Валентина
+                            p.feedback-date.
+                                25 февраля 2015
+                            //div.rate
+                        div.col-lg-9.col-md-9.col-xs-11
+                            div
+                                p.feedback-margin-left-2.
+                                    Держится на волосах около трёх часов.
+                                p.replay.feedback-margin-left-2
+                                    a(href="#") Ответить
+                    div.row.no-gutter.feedback-container
+                        div.feedback-padding.col-lg-3.col-md-3.col-xs-11
+                            p.feedback-name.
+                                Анна, Днепропетровск
+                            p.feedback-date.
+                                25 февраля 2015
+                            div.rate
+                        div.col-lg-9.col-md-9.col-xs-11
+                            div
+                                p.
+                                    Коляска понравилась как нам, так и ребенку. Покупали ребенку на полтора годика, возит игрушки с удовольствием. Она немного выше, чем другие, но все-равно удобная.
+                                p.replay
+                                    a(href="#") Ответить
+
+            div.row.no-gutter
+                div.col-lg-3.col-md-4.feedback-page
+                    ul
+                        li
+                            div.feedback-next
+                                a(href="#") <
+                        li
+                            div.feedback-number
+                                a(href="#") 1
+                        li
+                            div.feedback-number
+                                a(href="#") 2
+                        li
+                            div.feedback-number
+                                a(href="#") 3
+                        li
+                            div.feedback-number
+                                a(href="#")  ...25
+                        li
+                            div.feedback-next
+                                a(href="#") >
+            div.hide-element.row.no-gutter.catalog-wrap
+                div.col-lg-12.col-md-12
+                    p.catalog-title
+                        a(href="#") КАТАЛОГ
+                    p.catalog-links
+                        a(href="#") Spring Beauty Sale  >
+                        a(href="#") Spring beauty sale  >
+                        a(href="#") Spring Beauty Sale для всех типов волос
+                    p.catalog-links
+                        a(href="#") Шампуни>Универсальные шампуни  >
+                        a(href="#") Органический шампуни  >
+                        a(href="#") Шампуни для всех типов волос  >
+                        a(href="#") Индийские шампуни
+                    p.catalog-links
+                        a(href="#") Косметика по уходу Chandi  >
+                        a(href="#") Косметика для волос Chandi  >
+                        a(href="#") Органическая косметика Chandi  >
+                        a(href="#") Косметика для всех типов волос Chandi  >
+                        a(href="#") Шампуни Chandi
+                    p.catalog-links
+                        a(href="#") Косметика по уходу  >
+                        a(href="#") Универсальная косметика по уходу  >
+                        a(href="#") Органическая косметика по уходу  >
+                        a(href="#") Косметика по уходу для всех типов волос
+                    p.catalog-links
+                        a(href="#")  Косметика для волос  >
+                        a(href="#") Универсальная косметика для волос  >
+                        a(href="#") Органическая косметика для волос  >
+                        a(href="#") Косметика для волос для всех типов волос  Органическая косметика  >
+                        a(href="#") Универсальная органическая косметика  >
+                        a(href="#") Органическая косметика  >
+                        a(href="#") Органическая косметика для всех типов волос
+                    p.catalog-links
+                        a(href="#") Косметика для волос Chand  >
+                        a(href="#") Универсальная косметика по уходу  >
+                        a(href="#") Органическая косметика по уходу  >
+                        a(href="#") Косметика по уходу для всех типов волос
+
+        // ------------------------------- services -------------------------------
+        div.services-wrap
+            div.center
+                div.row.no-gutter
+                    div.services
+                        div.service-wrap.col-lg-3.col-md-3.col-xs-6
+                            div.service
+                                div.service-delivery
+                                    a(href="#")
+                                div.service-title
+                                    a(href="#") Бесплатная доставка
+                                div.service-description.hide-element-320.
+                                    По всей Украине без предоплат
+                                    и коммисий за перевод денег
+
+                        div.service-wrap.col-lg-3.col-md-3.col-xs-6
+                            div.service
+                                div.service-assortment
+                                    a(href="#")
+                                div.service-title
+                                    a(href="#") Огромный ассортимент
+                                div.service-description.hide-element-320.
+                                    В нашем магазине представлено
+                                    более 50000 товаров в наличии
+
+                        div.service-wrap.col-lg-3.col-md-3.col-xs-6
+                            div.service
+                                div.service-quality
+                                    a(href="#")
+                                div.service-title
+                                    a(href="#") 100% Качественные товары
+                                div.service-description.hide-element-320.
+                                    Все товары сертифицированы
+                                    и абсолютно безопасны для детей
+
+                        div.service-wrap.col-lg-3.col-md-3.col-xs-6
+                            div.service
+                                div.service-timework
+                                    a(href="#")
+                                div.service-title
+                                    a(href="#") Режим работы
+                                div.service-description.hide-element-320.
+                                    Мы работаем с понедельника
+                                    по воскресенье с 7:00 по 20:00
+
+        // ------------------------------- footer -------------------------------
+        div.footer
+            div.center
+                div.row.no-gutter
+                    div.col-lg-3.col-md-3.col-xs-6.footer-menu-1
+                        ul
+                            li.panamaua.
+                                Panama.UA
+                            li.panamaua-title.
+                                Самый детский интернет магазин
+                            li.copyright.
+                                &#169; 2012-2015
+                            li
+                                div.social
+                                    a.ic-fb(href="#") &nbsp;
+                                    a.ic-vk(href="#") &nbsp;
+                                    a.ic-ok(href="#") &nbsp;
+                                    // &nbsp;- єто специальный символ в html котор назыв "неразрывный пробел", это нужно для того чтобы избежать ошибок в старых браузерах при наведении
+
+                    div.col-lg-3.col-md-3.col-xs-6.footer-menu-2
+                        ul
+                            li
+                                a(href="#") О магазине
+                            li
+                                a(href="#") Baby клуб
+                            li
+                                a(href="#") Доставка и оплата
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Контакты
+
+                    div.col-lg-2.col-md-2.col-xs-6.footer-menu-3
+                        ul
+                            li
+                                a(href="#") Игрушки
+                            li
+                                a(href="#") Школа и творчество
+                            li
+                                a(href="#") Олежда и Обувь
+                            li
+                                a(href="#") Малышам
+                            li
+                                a(href="#") Гигиена и уход
+                            li
+                                a(href="#") Спорт и отдых
+                            li
+                                a(href="#") Интерьер и текстиль
+
+                    div.col-lg-4.col-md-4.col-xs-11.footer-menu-4
+                        ul
+                            li.email-wrap
+                                p.hide-element-1200 Узнавайте первыми о новинках
+                                form.email
+                                    input(type="text" name="email" placeholder="E-mail")
+                            li.email-title.hide-element-320.
+                                Узнавайте первыми о новинках  и распродажах
+                            li.footer-phone.hide-element-320
+                                | (044) 593 82 39
+                                span 0 800 50 77 12
+                            li.footer-call-back.hide-element-320
+                                a(href="#") Обратный звонок
+
+                div.row.no-gutter.footer-bottom.hide-element-320
+                    div.col-lg-8.col-md-8col-xs-8
+                        p.
+                            Интернет магазин игрушек, товаров для мам и детей
+                    div.col-lg-4.col-md-4col-xs-4
+                        a(href="#") Makeup.ua
+
+
+    // ---------------- Выпадающий список --------------
+    script.
+        function collapsElement(id) {
+        if ( document.getElementById(id).style.display != "none" ) {
+        document.getElementById(id).style.display = 'none';
+        }
+        else {
+        document.getElementById(id).style.display = '';
+        }
+        }
+
+    // ---------------- PhotoGallery --------------
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(src="fancybox/jquery.fancybox.js")
+    script.
+        $(document).ready(function(){
+
+            $(".preview a").on("click", function(){
+                $(".selected").removeClass("selected");
+                $(this).addClass("selected");
+                var picture = $(this).data();
+
+                event.preventDefault(); //prevents page from reloading every time you click a thumbnail
+
+
+                $(".full img").fadeOut( 100, function() {
+                    $(".full img").attr("src", picture.full);
+                    $(".full").attr("href", picture.full);
+                    $(".full").attr("title", picture.title);
+
+                }).fadeIn();
+
+
+            });// end on click
+
+            $(".full").fancybox({
+            helpers : {
+            title: {
+            type: 'inside'
+            }
+            },
+            closeBtn : true,
+            });
+
+
+        });//end doc ready
+
+    // ---------------- Карусель --------------
+    script.
+        //Обработка клика на стрелку вправо
+        $(document).on('click', ".carousel-button-right",function(){
+            var carusel = $(this).parents('.carousel');
+            right_carusel(carusel);
+            return false;
+        });
+        //Обработка клика на стрелку влево
+        $(document).on('click',".carousel-button-left",function(){
+            var carusel = $(this).parents('.carousel');
+            left_carusel(carusel);
+            return false;
+        });
+        function left_carusel(carusel){
+           var block_width = $(carusel).find('.carousel-block').outerWidth();
+           $(carusel).find(".carousel-items .carousel-block").eq(-1).clone().prependTo($(carusel).find(".carousel-items"));
+           $(carusel).find(".carousel-items").css({"left":"-"+block_width+"px"});
+           $(carusel).find(".carousel-items .carousel-block").eq(-1).remove();
+           $(carusel).find(".carousel-items").animate({left: "0px"}, 200);
+                }
+        function right_carusel(carusel){
+           var block_width = $(carusel).find('.carousel-block').outerWidth();
+           $(carusel).find(".carousel-items").animate({left: "-"+ block_width +"px"}, 200, function(){
+              $(carusel).find(".carousel-items .carousel-block").eq(0).clone().appendTo($(carusel).find(".carousel-items"));
+              $(carusel).find(".carousel-items .carousel-block").eq(0).remove();
+              $(carusel).find(".carousel-items").css({"left":"0px"});
+           });
+        }
+                $(function() {
+        //Раскомментируйте строку ниже, чтобы включить автоматическую прокрутку карусели
+        //	auto_right('.carousel:first');
+        })
+                // Автоматическая прокрутка
+        function auto_right(carusel){
+            setInterval(function(){
+                if (!$(carusel).is('.hover'))
+                    right_carusel(carusel);
+            }, 1000)
+        }
+        // Навели курсор на карусель
+        $(document).on('mouseenter', '.carousel', function(){$(this).addClass('hover')})
+        //Убрали курсор с карусели
+        $(document).on('mouseleave', '.carousel', function(){$(this).removeClass('hover')})
+
+    //jQuery (necessary for Bootstrap's JavaScript plugins)
+    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    //Include all compiled plugins (below), or include individual files as needed
+    script(src="js/bootstrap.min.js")
